@@ -1,0 +1,14 @@
+{
+  "name": "fine-grained",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "debug": "bun --inspect-brk index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
