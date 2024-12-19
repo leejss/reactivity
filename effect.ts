@@ -6,7 +6,7 @@ type EffectFunction = (() => void) & { dependencies: Set<Signal<any>> };
 
 export let currentEffect: EffectFunction | null = null;
 
-export function effect(fn: SyncFn) {
+export function createEffect(fn: SyncFn) {
   const effectFn: EffectFunction = () => {
     // Clean up previous dependencies
 

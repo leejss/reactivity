@@ -1,10 +1,10 @@
-import { effect } from "./effect";
+import { createEffect } from "./effect";
 import { Signal } from "./signal";
 
 const count = new Signal(0);
 
 // set currentEffect fn
-effect(() => {
+createEffect(() => {
   console.log("count::", count.value);
 });
 
