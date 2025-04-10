@@ -1,5 +1,3 @@
-// Observer + State Management
-
 type Message = {
   id: number;
   text: string;
@@ -17,6 +15,7 @@ export class MessageObserver {
     this.messages.forEach((message) => {
       subscribeFn(message);
     });
+
 
     return () => {
       this.subscribers.delete(subscribeFn);
@@ -44,6 +43,9 @@ export class MessageObserver {
     return [...this.messages];
   }
 }
+
+// subscriber functions are called when a new message is published
+// new message will be added to the messages array which is stored in the class
 
 function example() {
   const observer = new MessageObserver();
